@@ -19,7 +19,7 @@
 #' @title Dendrogram of a hierarchical clustering from a correlation matrix
 #' @param corr Correlation Matrix 
 #' @return Dendrogram colored by clusters 
-#' @import ape phytools squash fpc stats
+#' @import ape phytools squash fpc stats 
 #'@examples
 #'  data(iris)
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
@@ -39,7 +39,7 @@ dissimilarity<-1-abs(corr)
 dist_matrix<-as.dist(dissimilarity)
 kp<-nrow(corr)-1
 # Number of clusters 
-nc <- pamk(dist_matrix,krange=1:kp,criterion="asw",critout=TRUE)$nc
+nc <- pamk(dist_matrix,krange=1:kp,criterion="multiasw",critout=TRUE,usepam=FALSE)$nc
 
 # Ordering clusters
 

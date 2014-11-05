@@ -47,6 +47,6 @@ plotcorrDist<-function(x,labels=NULL){
   MIC_dis <- 1 - abs(x)
   MIC_distance <- as.dist(MIC_dis)
   map1<-distogram(MIC_distance,diag = F,cex=1,colFn = bluered,labels=labels,  key = FALSE,xpos=-0.75,asp=12/13)
-  vkey(map1, title = expression(delta), x = -14,y=3)
+  hkey(map1, title = expression(delta), x = 10,y=5)
   
 }
