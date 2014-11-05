@@ -59,9 +59,17 @@ for(i in 1:npcs){
   tree.data[,i]<-data.frame(abs(tree.data[,i])/sum(abs(tree.data[,i])))
 }
 
+if(npcs>1){
 PCA_tree<-melt(PC$loadings[,])
 colnames(PCA_tree)<-c("Parameter","PC","var")
 PCA_tree$var<-abs(PCA_tree$var)
+}else{
+  PCA_tree<-melt(PC$loadings[,])
+  PCA_tree$Parameter<-rownames(PCA_tree)
+  PCA_tree$PC<-rep("Comp.1",nrow(PCA_tree))
+  PCA_tree<-PCA_tree[,c("Parameter","PC","value")]
+  colnames(PCA_tree)<-c("Parameter","PC","var")
+ PCA_tree$var<-abs(PCA_tree$var)}
 #PCA_tree$PC<-revalue(as.factor(PCA_tree$PC), c("Comp.1"="PC1","Comp.2"="PC2","Comp.3"= "PC3","Comp.4"="PC4","Comp.5"="PC5","Comp.6"="PC6"))
 
 PCA_tree$Parameter<-as.factor(PCA_tree$Parameter)
@@ -78,7 +86,7 @@ p4<-p3+layer(geom="bar",position="dodge",stat="identity")+
   theme(panel.grid.major.y = element_line(color="gray70",size = 0.25,linetype="dashed"),panel.grid.major.x = element_line(color="gray70",size = 0.5,linetype="dashed"),axis.line.x = element_blank(),legend.direction="horizontal",legend.position="none", 
         legend.text.align=0,legend.key = element_blank(),
         axis.text.y = element_text( hjust = 1),axis.text.x = element_text( vjust = 0),legend.title = element_blank(),
-        text = element_text(size=20))+
+        text = element_text(size=13))+
   xlab("")+ylab("Variable contribution to PC (%)")+
   facet_wrap(~PC)+coord_polar()+guides(fill=guide_legend(nrow =6))+
   scale_x_discrete(breaks = names, labels=names)
