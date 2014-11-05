@@ -37,9 +37,9 @@ plotdendrogram<-function(corr){
 rownames(corr)<-colnames(corr)
 dissimilarity<-1-abs(corr)
 dist_matrix<-as.dist(dissimilarity)
-kp<-nrow(corr)-1
+kp<-round(nrow(corr)-1)/3
 # Number of clusters 
-nc <- pamk(dist_matrix,krange=1:kp,criterion="ch",critout=TRUE,usepam=T)$nc
+nc <- pamk(dist_matrix,krange=1:kp,criterion="asw",critout=TRUE,usepam=T)$nc
 
 # Ordering clusters
 
