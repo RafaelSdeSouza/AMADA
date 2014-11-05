@@ -39,7 +39,7 @@ dissimilarity<-1-abs(corr)
 dist_matrix<-as.dist(dissimilarity)
 kp<-nrow(corr)-1
 # Number of clusters 
-nc <- pamk(dist_matrix,krange=1:kp,criterion="multiasw",critout=TRUE,usepam=FALSE)$nc
+nc <- pamk(dist_matrix,krange=1:kp,criterion="ch",critout=TRUE,usepam=T)$nc
 
 # Ordering clusters
 
