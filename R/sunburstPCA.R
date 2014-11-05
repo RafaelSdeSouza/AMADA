@@ -20,6 +20,7 @@
 #' variables and plot them in polar coordinates.
 #' @param corr Correlation Matrix 
 #' @param npcs number of principal components 
+ #' @param method a string with one of the following values:  \code{PCA}, \code{RPCA}
 #' @return ggplot object  
 #'@import ggplot2 pcaPP ggthemes  reshape mvtnorm
 #'@examples
@@ -28,7 +29,7 @@
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
 #'  sunburstPCA(cor1)
 #'  
-#' @usage sunburstPCA(corr, npcs= 4)
+#' @usage sunburstPCA(corr, npcs= 4,method = c("PCA","RPCA"))
 #' 
 #' @author Rafael S. de Souza
 #' 
@@ -36,10 +37,21 @@
 #' @details The program is a simple alteration of PCAproj() that computes a desired number of robust
 #'  principal components using the grid search algorithm in a sphere. 
 #' @export 
-sunburstPCA<-function(corr,npcs=4){
+sunburstPCA<-function(corr,npcs=4,PCAmethod=c("PCA","RPCA")){
 names<-rownames(corr)
 
-PC<-PCAproj(corr, npcs, scale=NULL,method="sd","sphere",maxit = 1000)
+
+PCAmethod <- match.arg(PCAmethod)
+if(!is.matrix(corr)&!is.data.frame(corr))
+  stop("Need a matrix or data frame!")
+
+if(PCAmethod=="PCA"){
+  PC<-PCAproj(corr, npcs, scale="sd",center="mean",method="sd","sphere",maxit = 2000)
+}
+if(PCAmethod=="RPCA"){
+  PC<-PCAproj(corr, npcs, scale="mad",center="median",method="mad","sphere",maxit = 2000)  
+}
+#PC<-PCAproj(corr, npcs, scale=NULL,method="sd","sphere",maxit = 1000)
 
 tree.data<-as.data.frame(abs(PC$loadings[,]))
 
@@ -48,7 +60,6 @@ for(i in 1:npcs){
 }
 
 PCA_tree<-melt(PC$loadings[,])
-PCA_tree[1,]
 colnames(PCA_tree)<-c("Parameter","PC","var")
 PCA_tree$var<-abs(PCA_tree$var)
 #PCA_tree$PC<-revalue(as.factor(PCA_tree$PC), c("Comp.1"="PC1","Comp.2"="PC2","Comp.3"= "PC3","Comp.4"="PC4","Comp.5"="PC5","Comp.6"="PC6"))
