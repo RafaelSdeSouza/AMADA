@@ -18,12 +18,13 @@
 
 #' @title Dendrogram of a hierarchical clustering from a correlation matrix
 #' @param corr Correlation Matrix 
+#' @param type logical 
 #' @return Dendrogram colored by clusters 
 #' @import ape phytools squash fpc stats 
 #'@examples
 #'  data(iris)
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
-#'  plotdendrogram(cor1)
+#'  plotdendrogram(cor1,type="p")
 #'  
 #' @usage plotdendrogram(corr)
 #' 
@@ -32,8 +33,8 @@
 #' @keywords misc
 #' @export 
 
-plotdendrogram<-function(corr){
-  
+plotdendrogram<-function(corr,type=c("phylogram", "cladogram", "fan")){
+type <- match.arg(type)
 rownames(corr)<-colnames(corr)
 dissimilarity<-1-abs(corr)
 dist_matrix<-as.dist(dissimilarity)
@@ -76,9 +77,9 @@ my.cols<-c(cols,"grey60","grey60")
 #line type
 #line<-rep(1,ncol(corr))
 #line[which(my.cols=="black")]<-2
-plot(tree,type = "p",
-     edge.color = my.cols,show.node.label=TRUE,root.edge = T,no.margin = FALSE,label.offset = 0.025,
-     edge.width =6,font=2,cex=1.75,tip.color = labelColors[clust],direction="d")
-axisPhylo(2,las=1,col="black",lwd = 2)
+plot(tree,type = type,
+     edge.color = my.cols,show.node.label=TRUE,root.edge = T,no.margin = F,label.offset = 0.025,
+     edge.width =5,cex=1.25,tip.color = labelColors[clust],direction="d")
+#axisPhylo(2,las=1,col="black",lwd = 2)
 
 }
