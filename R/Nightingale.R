@@ -1,4 +1,4 @@
-#  R package GRAD file R/sunburstPCA.R
+#  R package GRAD file R/Nightingale.R
 #  Copyright (C) 2014  COIN
 #
 #This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
 
 # This function performs  find optimal number of clusterings in the correlation matrix and plot them   as a dendrogram
 #' @title PCA  visualization of a hierarchical clustering from a correlation matrix
-#'  @description \code{sunburstPCA} computes Robust PCA projections of 
+#'  @description \code{Nightingale} computes Robust PCA projections of 
 #' variables and plot them in polar coordinates.
 #' @param corr Correlation Matrix 
 #' @param npcs number of principal components 
@@ -26,10 +26,10 @@
 #'@examples
 #'  data(iris)
 #'  require(mvtnorm)
-#'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
-#'  sunburstPCA(cor1)
+#'  cor1<-Corr_MIC(iris[,1:4],PCAmethod="pearson")
+#'  Nightingale(cor1)
 #'  
-#' @usage sunburstPCA(corr, npcs= 4,method = c("PCA","RPCA"))
+#' @usage Nightingale(corr, npcs= 4,PCAmethod = c("PCA","RPCA"))
 #' 
 #' @author Rafael S. de Souza
 #' 
@@ -37,7 +37,7 @@
 #' @details The program is a simple alteration of PCAproj() that computes a desired number of robust
 #'  principal components using the grid search algorithm in a sphere. 
 #' @export 
-sunburstPCA<-function(corr,npcs=4,PCAmethod=c("PCA","RPCA")){
+Nightingale<-function(corr,npcs=4,PCAmethod=c("PCA","RPCA")){
 names<-rownames(corr)
 
 

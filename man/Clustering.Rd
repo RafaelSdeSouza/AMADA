@@ -3,14 +3,12 @@
 \alias{Clustering}
 \title{Clustering analysis}
 \usage{
-Clustering(dat, method = c("PCA","RPCA"))
+Clustering(x, method = c("PCA","RPCA"))
 }
 \arguments{
 \item{x}{A matrix or dataframe with objects in the rows and features in the columns}
 
 \item{method}{a string with one of the following values:  \code{PCA}, \code{RPCA}}
-
-\item{scale}{a boolean indicating if the variables should be scaled.}
 }
 \value{
 plot object

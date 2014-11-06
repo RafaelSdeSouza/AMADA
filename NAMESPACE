@@ -2,10 +2,10 @@
 
 export(Clustering)
 export(Corr_MIC)
+export(Nightingale)
 export(plotcorrDist)
 export(plotdendrogram)
 export(plotgraph)
-export(sunburstPCA)
 import(MASS)
 import(NbClust)
 import(ape)
