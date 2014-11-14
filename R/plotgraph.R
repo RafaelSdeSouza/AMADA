@@ -61,7 +61,7 @@ plotgraph<-function(corr,layout=c("spring","circular")){
   col_q<-colorRampPalette(c("#e41a1c","#377eb8","#4daf4a","#984ea3","#ff7f00","#ffff33","#a65628","#f781bf"))
   
   qgraph(M,layout=layout,type="factorial",legend=FALSE,vsize=7.75,groups=Biggroup,
-         label.scale=F,label.cex=0.65,edge.color = "black",labels=rownames(corr),
+         label.scale=F,label.cex=0.85,edge.color = "black",labels=rownames(corr),
          transparency = F,bg=F,diag=F,color=col_q(nc),mar=c(2,2,2,2),vTrans=235,arrows=T)
   
 }
