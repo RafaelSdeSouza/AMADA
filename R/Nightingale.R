@@ -20,7 +20,7 @@
 #' variables and plot them in polar coordinates.
 #' @param corr Correlation Matrix 
 #' @param npcs number of principal components 
- #' @param method a string with one of the following values:  \code{PCA}, \code{RPCA}
+ #' @param PCAmethod a string with one of the following values:  \code{PCA}, \code{RPCA}
 #' @return ggplot object  
 #'@import ggplot2 pcaPP ggthemes  reshape mvtnorm
 #'@examples
