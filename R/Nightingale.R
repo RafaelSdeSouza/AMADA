@@ -37,7 +37,7 @@
 #' @details The program is a simple alteration of PCAproj() that computes a desired number of robust
 #'  principal components using the grid search algorithm in a sphere. 
 #' @export 
-Nightingale<-function(corr,npcs=4,PCAmethod=c("PCA","RPCA")){
+Nightingale<-function(corr,npcs=4,PCAmethod=c("PCA","RPCA"),...){
 names<-rownames(corr)
 
 
@@ -86,7 +86,7 @@ p4<-p3+layer(geom="bar",position="dodge",stat="identity")+
   theme(panel.grid.major.y = element_line(color="gray70",size = 0.25,linetype="dashed"),panel.grid.major.x = element_line(color="gray70",size = 0.5,linetype="dashed"),axis.line.x = element_blank(),legend.direction="horizontal",legend.position="none", 
         legend.text.align=0,legend.key = element_blank(),
         axis.text.y = element_text( hjust = 1),axis.text.x = element_text( vjust = 0),legend.title = element_blank(),
-        text = element_text(size=13))+
+        text = element_text(size=11))+
   xlab("")+ylab("Variable contribution to PC (%)")+
   facet_wrap(~PC)+coord_polar()+guides(fill=guide_legend(nrow =6))+
   scale_x_discrete(breaks = names, labels=names)

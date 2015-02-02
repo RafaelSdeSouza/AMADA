@@ -35,7 +35,7 @@
 
 # Plot Correlation Matrix
 
-plotcorrDist<-function(x,labels=NULL){
+plotcorrDist<-function(x,labels=NULL,...){
   if(!is.matrix(x)&!is.data.frame(x))
     stop("Need a matrix or data frame!")
   
