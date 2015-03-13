@@ -16,7 +16,7 @@ http://www.rstudio.com
 ```{r,results='hide',message=FALSE, cache=FALSE}
 install.packages(c('ape','circlize','corrplot','devtools','fpc','ggplot2',
 'qgraph','ggthemes','phytools','squash','stats','markdown','MASS','mclust',
-'minerva','mvtnorm','pcaPP','pheatmap','RColorBrewer')
+'minerva','mvtnorm','pcaPP','pheatmap','RColorBrewer'))
 ```
 
 
