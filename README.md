@@ -34,7 +34,7 @@ install_github("RafaelSdeSouza/AMADA")
 
 require(shiny)
 runUrl('https://github.com/RafaelSdeSouza/AMADA_shiny/archive/master.zip')
-### If the above do not work, try this
+### If the above does not work, try this
 ### options("download.file.extra" = "--no-check-certificate") 
 ```
 
