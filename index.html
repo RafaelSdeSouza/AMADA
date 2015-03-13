@@ -28,8 +28,8 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h2>
-<a id="amada" class="anchor" href="#amada" aria-hidden="true"><span class="octicon octicon-link"></span></a>AMADA</h2>
+          <h1>
+<a id="amada" class="anchor" href="#amada" aria-hidden="true"><span class="octicon octicon-link"></span></a>AMADA</h1>
 
 <p>Welcome to the AMADA - Analysis of Muldimensional Astronomical DAtasets </p>
 
@@ -37,14 +37,14 @@
 This is done by performing a hierarchical clustering analysis for different choices of correlation matrices and by doing a principal components analysis
 in the original data. Additionally, AMADA provides a set of modern  visualization data-mining diagnostics.  The user can switch between them using the different tabs. </p>
 
-<h1>
-<a id="install-r-and-rstudio-from" class="anchor" href="#install-r-and-rstudio-from" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install R and Rstudio from</h1>
+<h2>
+<a id="install-r-and-rstudio-from" class="anchor" href="#install-r-and-rstudio-from" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install R and Rstudio from</h2>
 
 <p><a href="http://www.r-project.org">http://www.r-project.org</a>
 <a href="http://www.rstudio.com">http://www.rstudio.com</a></p>
 
-<h1>
-<a id="install-required-libraries" class="anchor" href="#install-required-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Required libraries</h1>
+<h2>
+<a id="install-required-libraries" class="anchor" href="#install-required-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Required libraries</h2>
 
 <pre lang="r,results='hide',message=FALSE,"><code>install.packages(c('ape','circlize','corrplot','devtools','fpc','ggplot2',
 'qgraph','ggthemes','phytools','squash','stats','markdown','MASS','mclust',
@@ -52,16 +52,16 @@ in the original data. Additionally, AMADA provides a set of modern  visualizatio
 'shinysky'));
 </code></pre>
 
-<h1>
-<a id="install-amada-r-package-from-github" class="anchor" href="#install-amada-r-package-from-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install AMADA R package from github</h1>
+<h2>
+<a id="install-amada-r-package-from-github" class="anchor" href="#install-amada-r-package-from-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install AMADA R package from github</h2>
 
 <pre lang="r,results='hide',message=FALSE,"><code>require(devtools)
 
 install_github("RafaelSdeSouza/AMADA")
 </code></pre>
 
-<h1>
-<a id="run-shiny-app" class="anchor" href="#run-shiny-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run Shiny App</h1>
+<h2>
+<a id="run-shiny-app" class="anchor" href="#run-shiny-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run Shiny App</h2>
 
 <pre lang="r,results='hide',message=FALSE,"><code>options("download.file.extra" = "--no-check-certificate")
 require(shiny)
