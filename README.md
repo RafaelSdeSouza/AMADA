@@ -6,6 +6,12 @@ AMADA allows an iterative exploration and information retrieval of high-dimensio
 This is done by performing a hierarchical clustering analysis for different choices of correlation matrices and by doing a principal components analysis
 in the original data. Additionally, AMADA provides a set of modern  visualization data-mining diagnostics.  The user can switch between them using the different tabs. 
 
+# Install R and Rstudio from 
+
+http://www.r-project.org
+http://www.rstudio.com
+
+
 # Install Required libraries
 ```{r,results='hide',message=FALSE, cache=FALSE}
 install.packages(c('ape','circlize','corrplot','devtools','fpc','ggplot2',
@@ -13,6 +19,10 @@ install.packages(c('ape','circlize','corrplot','devtools','fpc','ggplot2',
 'minerva','mvtnorm','pcaPP','pheatmap','RColorBrewer','shinyapps','shinyIncubator',
 'shinysky'));
 ```
+
+
+
+
 # Install AMADA R package from github
 ```{r,results='hide',message=FALSE, cache=FALSE}
 require(devtools)
