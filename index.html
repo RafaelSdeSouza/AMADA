@@ -1,72 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Amada by RafaelSdeSouza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Amada by RafaelSdeSouza</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Amada</h1>
-        <p class="header"></p>
+    <header>
+      <div class="inner">
+        <h1>Amada</h1>
+        <h2></h2>
+        <a href="https://github.com/RafaelSdeSouza/AMADA" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/RafaelSdeSouza/AMADA/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/RafaelSdeSouza/AMADA/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/RafaelSdeSouza/AMADA">View On GitHub</a></li>
-        </ul>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="amada" class="anchor" href="#amada" aria-hidden="true"><span class="octicon octicon-link"></span></a>AMADA</h2>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/RafaelSdeSouza">RafaelSdeSouza</a></p>
+<p>Welcome to the AMADA - Analysis of Muldimensional Astronomical DAtasets </p>
 
-
-      </header>
-      <section>
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>AMADA allows an iterative exploration and information retrieval of high-dimensional data sets.
+This is done by performing a hierarchical clustering analysis for different choices of correlation matrices and by doing a principal components analysis
+in the original data. Additionally, AMADA provides a set of modern  visualization data-mining diagnostics.  The user can switch between them using the different tabs. </p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="data-input" class="anchor" href="#data-input" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Input</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>AMADA allows the users to either use available datasets or upload their own.   Check the bottom of the 'Import Dataset' panel to see if the data have been properly imported. The data can be seen on the screen by clicking in the tab "Dataset" on the main page. </p>
+
+<h4>
+<a id="available-datasets" class="anchor" href="#available-datasets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available datasets</h4>
+
+<p>The available  datasets  follow the same nomenclature of their respective source articles. I recommend  the user to check the original articles or catalogs for a better understanding of their meaning.</p>
+
+<ul>
+<li><p>Supernova host properties (<a href="http://adsabs.harvard.edu/abs/2014arXiv1401.3317S">Table 1, Sako, M. et al. 2014</a>): Type Ia and II  Supernova host-galaxy  properties  from  Sloan Digital Sky Survey  multi-band photometry.</p></li>
+<li><p>Mock galaxy catalog (<a href="http://adsabs.harvard.edu/abs/2011MNRAS.413..101G">Guo et al. 2011</a>): Galaxy semi-analytic  formation models build on top of  the Millennium  (<a href="http://adsabs.harvard.edu/abs/2003MNRAS.339..312S">Springel et al. 2005</a>) and Millenium II simulations (<a href="http://adsabs.harvard.edu/abs/2009MNRAS.398.1150B">Boylan-Kolchin et al. 2009</a>). </p></li>
+<li><p><a href="http://www.astro.ethz.ch/carollo/research/ZENS">ZENS catalog</a> (<a href="http://arxiv.org/abs/1206.5807">Carollo et al. 2012</a>, <a href="http://arxiv.org/abs/1206.6108">Cibinel et al. 2012</a>, <a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1206.6496">Cibinel et al. 2013</a>): The Zurich ENvironmental Study (ZENS) is a survey of galaxy groups in the local universe.  The  sample consists of 141 groups in the  redshift range 0.05 &lt; z &lt; 0.0585.</p></li>
+</ul>
+
+<h4>
+<a id="import-dataset" class="anchor" href="#import-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Import dataset</h4>
+
+<p>Data must be imported as a CSV/TXT format, columns are named and  separated by  spaces.
+It may contain an arbitrary number of columns and rows. If missing data is present, it should be marked as NA. An example of how a dataset should be formatted can be found by clicking the tab "Dataset" on the main page.</p>
 
 <h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a id="control-options" class="anchor" href="#control-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Options</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>On the left panel, the user can choose among different methods of analysis and visualization. Once the combination is chosen, click on the button "Make it so" to update the plots. The following options are available:</p>
+
+<p><strong>Fraction of data to display</strong>: choose the percentage of data displayed on the screen. </p>
+
+<p><strong>Correlation method</strong>: choose among <em>Pearson</em>, <em>Spearman</em> or <em>Maximum Information Coefficient (MIC)</em>. </p>
+
+<p><strong>Display numbers</strong>: choose if correlation coefficients should be displayed in the heatmap. </p>
+
+<p><strong>Dendrogram type</strong>: choose among <em>Phylogram</em>, <em>Cladogram</em> or <em>Fan</em>.</p>
+
+<p><strong>Graph layout</strong>: choose among <em>Spring</em> or <em>Circular</em>.</p>
+
+<p><strong>Chord diagram colour</strong>: choose among different colour schemes. </p>
+
+<p><strong>Number of PCs</strong>: choose the number or principal components to display as Nightingale charts. </p>
+
+<p><strong>PCA method</strong>: choose among <em>Standard PCA</em> or <em>Robust PCA</em>. </p>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="employed--analysis" class="anchor" href="#employed--analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Employed  Analysis</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The current version of AMADA allows the user to choose among different types of correlation methods and PCA analysis.  </p>
+
+<h4>
+<a id="principal-components-analysis" class="anchor" href="#principal-components-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Principal Components Analysis</h4>
+
+<p><strong>PCA</strong>: A orthogonal  transformation that linearly converts  a  dataset into a set of uncorrelated  variables called principal components (PCs). The PCs are computed by diagonalization of the data correlation matrix, with the resulting eigenvectors corresponding to PCs and the resulting
+eigenvalues to the variance explained by the PCs.
+The eigenvector corresponding to the largest eigenvalue gives the direction
+of greatest variance (PC1), the second largest eigenvalue gives the direction
+of the next highest variance (PC2), and so on (e.g., <a href="http://www.springer.com/statistics/statistical+theory+and+methods/book/978-0-387-95442-4">Jolliffe 2002</a>). </p>
+
+<p><strong>Robust PCA</strong>:  Robust  principal component analysis using the Projection–Pursuit principle. The data is projected on  a lower-dimensional space such that a robust measure of variance of the projected data will be maximized (<a href="http://www.sciencedirect.com/science/article/pii/S016974390700007X">Croux, Filzmoser and Oliveira, 2007</a>). </p>
+
+<h4>
+<a id="hierarchical-clustering" class="anchor" href="#hierarchical-clustering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hierarchical Clustering</h4>
+
+<p>An unsupervised learning technique whose aim is to find hidden structures  in the dataset. 
+Instead of find a single partitioning of the
+data, the goal of hierarchical clustering is to build a hierarchy of partitions which may reveal interesting structure in the dataset at multiple levels of association. A clear advantage is the needless of a prior specification of the number of clusters to be searched.
+Nonetheless, the method implicitly  assumes a measure of similarity between pairs of objects. Which in our case is given by the correlation distance d(x,y)= 1-|corr(x,y)|. The outcome is a hierarchical representations in which
+the clusters at each level of the hierarchy are created by merging clusters
+at the next lower level.
+We employ an agglomerative approach, which starts with a single cluster assigned for each object and then
+progressively merge the two closest clusters until a single cluster remains.</p>
+
+<p><strong>Number of Clusters</strong>:  To guide the user, we  display an optimal number of clusters via <a href="http://www.tandfonline.com/doi/abs/10.1080/03610927408827101#.VFtZ_77ZLlc">Calinski and Harabasz, 1972</a> index. The groups are  color-coded  in the dendrogram and graph visualizations.</p>
+
+<h4>
+<a id="correlation-method" class="anchor" href="#correlation-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Correlation Method</h4>
+
+<p><strong>Pearson</strong>: a measure of the linear correlation  between two variables X and Y (<a href="http://adsabs.harvard.edu/abs/1895RSPS...58..240P">Pearson  1895</a>).</p>
+
+<p><strong>Spearman</strong>: a measure of the monotonic  correlation  between two variables X and Y 
+(<a href="http://www.jstor.org/stable/1412159?origin=JSTOR-pdf">Spearman 1904</a>).</p>
+
+<p><strong>Maximum Information Coefficient</strong>: a measure of linear or non-linear correlation  between two variables X and Y (<a href="http://www.sciencemag.org/content/334/6062/1518">Reshef et al. 2011</a>). The current version of MIC does not support NA.</p>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="visualization" class="anchor" href="#visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualization</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+<p>AMADA offers many different plots to represent the results of the  correlation analysis and unsupervised learning of the datasets.</p>
+
+<p>The user can choose any of the following plots:</p>
+
+<p><strong>Heatmap</strong>: Plots a correlation matrix color-coded by the correlation level between each pair of variables (e.g., <a href="http://CRAN.R-project.org/package=pheatmap">Raivo Kolde, 2013</a>). For visualization purposes, the arrangement of the rows and columns are made following a hierarchical clustering with a dendrogram drawn at the edges of the matrix.</p>
+
+<p><strong>Distogram</strong>: Plots  a distance  matrix  containing the distances, taken pairwise, of  all sets of variables (e.g., <a href="http://www.cbs.dtu.dk/%7Eeklund/squash/">Aron Eklund,  2012</a>). The distance being used is the correlation distance, given by d(x,y)= 1-|corr(x,y)|. </p>
+
+<p><strong>Dendrogram</strong>:  Plots the dendrogram of the hierarchical clustering applied to the catalog variables. Options are: Phylogram, Cladogram or Fan. This type of visualization is adapted from  tools for  Phylogenetic studies
+(e.g., <a href="http://bioinformatics.oxfordjournals.org/content/20/2/289.abstract">Paradis et al. 2003</a>). </p>
+
+<p><strong>Graph</strong>: Plots a clustered graph built in such way that each vertice represent a different parameter and the thickness of the edges are weighted by the degree of correlation between each pair of variables (<a href="http://www.jstatsoft.org/v48/i04/">Epskamp et al. 2012</a>). The configuration is such that highly correlated parameters appear closer in the graph.</p>
+
+<p><strong>Chord diagram</strong>: Plots a matrix using a  circular layout. The columns and rows are represented by segments around the circle. Individual cells are shown as ribbons, which connect the corresponding row and column segments (<a href="http://bioinformatics.oxfordjournals.org/content/early/2014/06/14/bioinformatics.btu393">Gu, Z. (2014)</a>). The  thickness of the ribbons  are weighted by the degree of correlation between each pair of variables. For a given choice of colour pallete, the colour intensity ranges from fully anti-correlated to correlated.   </p>
+
+<p><strong>Nightingale chart</strong>: Plots a polar barplot. The length of the strips represents  the relative contribution of  each variable to the <em>i-th</em> Principal Component. This plot  is inspired by the original chart from  <a href="http://www.florence-nightingale-avenging-angel.co.uk/Nightingale_Hockey_Stick.pdf">Nightingale 1858</a>.<br>
+<em>Probably one of the most influential visualizations of all time used by  Florence Nightingale to convince Queen Victoria about improving hygiene at military hospitals, therefore  saving lives of  thousands of soldiers.</em></p>
+
+<h3>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h3>
+
+<p>R Core Team (2014). R: A language and environment for statistical computing. R
+Foundation for Statistical Computing, Vienna, Austria. URL <a href="http://www.%0A-project.org/">http://www.R-project.org/</a>.</p>
+
+<h4>
+<a id="package-dependencies" class="anchor" href="#package-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Package dependencies</h4>
+
+<p><a href="http://bioinformatics.oxfordjournals.org/content/20/2/289.abstract">ape</a>,
+<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract">phytools</a>,
+<a href="http://CRAN.R-project.org/package=squash">squash</a>,
+<a href="http://CRAN.R-project.org/package=fpc">fpc</a>,
+<a href="http://CRAN.R-project.org/package=minerva">minerva</a>,
+<a href="http://www.stats.ox.ac.uk/pub/MASS4">MASS</a>,
+<a href="http://CRAN.R-project.org/package=corrplot">corrplot</a>,
+<a href="http://www.jstatsoft.org/v48/i04/">qgraph</a>,
+<a href="http://had.co.nz/ggplot2/book">ggplot2</a>,
+<a href="http://CRAN.R-project.org/package=ggthemes">ggthemes</a>,
+<a href="http://www.jstatsoft.org/v21/i12/paper">reshape</a>,
+<a href="http://CRAN.R-project.org/package=pcaPP">pcaPP</a>,
+<a href="http://CRAN.R-project.org/package=mvtnorm">mvtnorm</a>,
+<a href="http://CRAN.R-project.org/package=circlize">circlize</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/RafaelSdeSouza/AMADA/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/RafaelSdeSouza/AMADA/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/RafaelSdeSouza/AMADA"></a> is maintained by <a href="https://github.com/RafaelSdeSouza">RafaelSdeSouza</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+  
   </body>
 </html>
