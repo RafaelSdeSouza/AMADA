@@ -14,9 +14,27 @@ http://www.rstudio.com
 
 ## Install Required libraries
 ```{r,results='hide',message=FALSE, cache=FALSE}
-install.packages(c('ape','circlize','corrplot','RCurl','devtools','fpc','ggplot2',
-'qgraph','ggthemes','phytools','squash','stats','markdown','MASS','mclust',
-'minerva','mvtnorm','pcaPP','pheatmap','RColorBrewer'),dependencies=TRUE)
+install.packages('ape',dependencies=TRUE)
+install.packages('circlize',dependencies=TRUE)
+install.packages('corrplot',dependencies=TRUE)
+install.packages('devtools,dependencies=TRUE)
+install.packages('fpc',dependencies=TRUE)
+install.packages('ggplot2',dependencies=TRUE)
+install.packages('qgraph',dependencies=TRUE)
+install.packages('ggthemes',dependencies=TRUE)
+install.packages('phytools',dependencies=TRUE)
+install.packages('squash',dependencies=TRUE)
+install.packages('MASS',dependencies=TRUE)
+install.packages('markdown',dependencies=TRUE)
+install.packages('mclust',dependencies=TRUE)
+install.packages('minerva',dependencies=TRUE)
+install.packages('mvtnorm',dependencies=TRUE)
+install.packages('pcaPP',dependencies=TRUE)
+install.packages('pheatmap',dependencies=TRUE)
+install.packages('RColorBrewer',dependencies=TRUE)
+install.packages('RCurl',dependencies=TRUE)
+install.packages('stats',dependencies=TRUE)
+install.packages('shiny',dependencies=TRUE)
 ```
 
 
