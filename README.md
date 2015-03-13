@@ -8,10 +8,10 @@ in the original data. Additionally, AMADA provides a set of modern  visualizatio
 
 # Install Required libraries
 ```{r,results='hide',message=FALSE, cache=FALSE}
-install.packages('ape','circlize','corrplot','devtools','fpc','ggplot2',
+install.packages(c('ape','circlize','corrplot','devtools','fpc','ggplot2',
 'qgraph','ggthemes','phytools','squash','stats','markdown','MASS','mclust',
 'minerva','mvtnorm','pcaPP','pheatmap','RColorBrewer','shinyapps','shinyIncubator',
-'shinysky');
+'shinysky'));
 ```
 # Install AMADA R package from github
 ```{r,results='hide',message=FALSE, cache=FALSE}
