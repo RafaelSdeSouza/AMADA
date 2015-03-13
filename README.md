@@ -37,7 +37,7 @@ require(devtools)
 install_github("RafaelSdeSouza/AMADA")
 ```
 
-#Run Shinny App
+#Run Shiny App
 runUrl('https://github.com/RafaelSdeSouza/AMADA_shiny/archive/master.zip')
 
 
