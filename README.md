@@ -6,6 +6,36 @@ AMADA allows an iterative exploration and information retrieval of high-dimensio
 This is done by performing a hierarchical clustering analysis for different choices of correlation matrices and by doing a principal components analysis
 in the original data. Additionally, AMADA provides a set of modern  visualization data-mining diagnostics.  The user can switch between them using the different tabs. 
 
+# Required libraries
+```{r,results='hide',message=FALSE, cache=FALSE}
+install.packages('devtools') ; library(devtools)   # needed for github interface
+install.packages('ape') ; library(ape)   # imports for CosmoPhotoz
+install.packages('phytools') ; library(phytools)
+install.packages('squash') ; library(squash)
+install.packages('fpc') ; library(fpc)
+install.packages('stats') ; library(stats)
+install.packages('minerva') ; library(minerva)
+install.packages('MASS') ; library(MASS)
+install.packages('corrplot') ; library(corrplot)
+install.packages('qgraph') ; library(qgraph)
+install.packages('ggplot2') ; library(ggplot2)
+install.packages('ggthemes') ; library(ggthemes)
+install.packages('pcaPP') ; library(pcaPP)
+install.packages('mclust') ; library(mclust)
+install.packages('mvtnorm') ; library(mvtnorm)
+install.packages('circlize') ; library(circlize)
+install.packages('RColorBrewer') ; library(RColorBrewer)
+install.packages('pheatmap') ; library(pheatmap)
+install.packages('markdown');library(markdown)
+install.packages('shinyIncubator');library(shinyIncubator)
+install.packages('shinysky');require(shinysky)
+install.packages('shinyapps');require(shinyapps)
+```
+# Install from github
+```{r,results='hide',message=FALSE, cache=FALSE}
+require(devtools)
+install_github("RafaelSdeSouza/AMADA")
+```
 
 
 ###  Data Input
