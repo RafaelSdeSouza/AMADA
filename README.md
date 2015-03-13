@@ -31,11 +31,15 @@ install.packages('shinyIncubator');library(shinyIncubator)
 install.packages('shinysky');require(shinysky)
 install.packages('shinyapps');require(shinyapps)
 ```
-# Install from github
+# Install AMADA R package from github
 ```{r,results='hide',message=FALSE, cache=FALSE}
 require(devtools)
 install_github("RafaelSdeSouza/AMADA")
 ```
+
+#Run Shinny App
+runUrl('https://github.com/RafaelSdeSouza/AMADA_shiny/archive/master.zip')
+
 
 
 ###  Data Input
