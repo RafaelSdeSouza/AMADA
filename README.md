@@ -17,7 +17,7 @@ http://www.rstudio.com
 install.packages('ape',dependencies=TRUE)
 install.packages('circlize',dependencies=TRUE)
 install.packages('corrplot',dependencies=TRUE)
-install.packages('devtools,dependencies=TRUE)
+install.packages('devtools',dependencies=TRUE)
 install.packages('fpc',dependencies=TRUE)
 install.packages('ggplot2',dependencies=TRUE)
 install.packages('ggthemes',dependencies=TRUE)
