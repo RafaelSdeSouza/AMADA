@@ -20,13 +20,13 @@
 #' variables and plot them in polar coordinates.
 #' @param corr Correlation Matrix 
 #' @param npcs number of principal components 
- #' @param PCAmethod a string with one of the following values:  \code{PCA}, \code{RPCA}
+#' @param PCAmethod a string with one of the following values:  \code{PCA}, \code{RPCA}
 #' @return ggplot object  
 #'@import ggplot2 pcaPP ggthemes  reshape mvtnorm
 #'@examples
 #'  data(iris)
 #'  require(mvtnorm)
-#'  cor1<-Corr_MIC(iris[,1:4],PCAmethod="pearson")
+#'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
 #'  Nightingale(cor1)
 #'  
 #' @usage Nightingale(corr, npcs= 4,PCAmethod = c("PCA","RPCA"))
@@ -76,7 +76,7 @@ PCA_tree$Parameter<-as.factor(PCA_tree$Parameter)
 levels(PCA_tree$PC)
 #PCA_tree$var<-PCA_tree$var^2
 
-Parameter=NULL# Usuless command to avoind R CDM check note
+Parameter=NULL# Usuless command to avoid R CDM check note
 p3<-ggplot(PCA_tree,aes(x=Parameter,y=100*var,fill=Parameter,group=PC))
 p4<-p3+layer(geom="bar",position="dodge",stat="identity")+
   coord_cartesian(ylim=c(0, 1))+labs(title="")+

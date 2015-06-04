@@ -1,7 +1,7 @@
 Package: AMADA
 Type: Package
-Title: Correlation analysis of multidimensional datasets
-Version: 0.2
+Title: Analysis of Muldimensional Astronomical DAtasets 
+Version: 0.3
 Date: 2014-06-07
 Author: Rafael S. de Souza
 Maintainer: Rafael S. de Souza <rafael.2706@gmail.com>
@@ -12,7 +12,7 @@ Description: User-friedly interface to perform linear and non-linear
     interface.
 Depends:
     R (>= 3.0)
-License: GPL-3
+License: GPL (>= 2)
 Imports:
     ape,
     phytools,
@@ -27,7 +27,6 @@ Imports:
     ggthemes,
     reshape,
     pcaPP,
-    NbClust,
     mclust,
     mvtnorm,
     circlize,

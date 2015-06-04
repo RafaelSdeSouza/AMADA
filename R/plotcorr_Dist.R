@@ -19,13 +19,14 @@
 #' @title Plot correlation matrix
 #' @param x a correlation  matrix 
 #' @param labels a list with variables names, default = NULL
+#' @param ... other options for distogram function
 #' @return A plot of the Correlation Matrix
 #' @import  corrplot squash
 #'@examples
 #'  data(iris)
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
 #'  plotcorrDist(cor1)
-#' @usage plotcorrDist(x,labels=NULL)
+#' @usage plotcorrDist(x,labels=NULL,...)
 #' 
 #' @author Rafael S. de Souza
 #' 

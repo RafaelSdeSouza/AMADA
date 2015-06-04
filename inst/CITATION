@@ -1,0 +1,19 @@
+citHeader("To cite AMADA in publications use:")
+
+citEntry(entry = "Article",
+         title        = "AMADA-Analysis of Multidimensional Astronomical Datasets",
+         author       = personList(as.person("Rafael S. de Souza"),
+                                   as.person("Benedetta Ciardi")),
+         journal      = "Astronomy and Computing",
+         year         = "2015",
+         volume       = "",
+         number       = "",
+         pages        = "",
+         url          = "http://arxiv.org/abs/1503.07736",
+         
+         textVersion  =
+           paste("Rafael S. de Souza, Benedetta Ciardi (2015).",
+                 "AMADA-Analysis of Multidimensional Astronomical Datasets",
+                 "Astronomy and Computing",
+                 "URL http://arxiv.org/abs/1503.07736")
+)

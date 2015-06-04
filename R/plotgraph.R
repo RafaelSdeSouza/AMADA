@@ -17,6 +17,7 @@
 # This function performs  find optimal number of clusterings in the correlation matrix and plot them   as a dendrogram
 #' @title Network visualization of a hierarchical clustering from a correlation matrix
 #' @param corr Correlation Matrix 
+#' @param layout string 
 #' @return qgraph object  
 #' @import qgraph squash fpc stats
 #'@examples
@@ -24,7 +25,7 @@
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
 #'  plotgraph(cor1)
 #'  
-#' @usage plotgraph(corr)
+#' @usage plotgraph(corr,layout=c("spring","circular"))
 #' 
 #' @author Rafael S. de Souza
 #' 

@@ -26,7 +26,7 @@
 #'  cor1<-Corr_MIC(iris[,1:4],method="pearson")
 #'  plotdendrogram(cor1,type="p")
 #'  
-#' @usage plotdendrogram(corr)
+#' @usage plotdendrogram(corr,type=c("phylogram", "cladogram", "fan"))
 #' 
 #' @author Rafael S. de Souza
 #' 
